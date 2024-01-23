@@ -1,6 +1,4 @@
 requests
 pyyaml
-csv
-json
 termcolor
 prompt_toolkit
