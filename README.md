@@ -1,6 +1,9 @@
-# IoC Parser
+# ioc-toolkit
 
-IoCParserPro is a Python script designed to extract Indicators of Compromise (IoCs) from text input. It interacts with the api.iocparser.com to parse various types of IoCs and includes additional functionality for guessing IPs and defanging IoCs.
+ioc-toolkit is a Python script designed to extract Indicators of Compromise (IoCs) from text input. It leverages the api.iocparser.com for parsing various types of IoCs and includes additional functionality for guessing IPs and defanging IoCs.
+
+Special thanks to [api.iocparser.com](https://api.iocparser.com) for providing the IoC parsing service.
+
 
 ### Installation
 
@@ -8,7 +11,7 @@ First, clone the repository or download the script to your local machine.
 
 ```bash
 git clone https://your-repository-url.git
-cd ioc-parser-pro
+cd ioc-toolkit
 ```
 
 Install the required Python packages:
@@ -24,7 +27,7 @@ pip install -r requirements.txt
 1. Run the script using Python:
 
    ```bash
-   python3 ioc_parser_pro.py
+   python3 ioc-toolkit.py
    ```
 
 2. Follow the on-screen prompts to input text directly or use the `--input` flag to specify a file path for text input.
