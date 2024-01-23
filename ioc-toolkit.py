@@ -50,7 +50,7 @@ def extract_guessed_ips(data):
 
 def defang_ioc(ioc, ioc_type):
     defanged_ioc = ioc
-    if ioc_type.lower() in ["ipv4", "ipv6", "domain", "hosts", "urls", "guessed_ip", "guessed_ipv4"]:
+    if ioc_type.lower() in ["ipv4", "ipv6", "domain", "hosts", "url", "guessed_ip", "guessed_ipv4"]:
         defanged_ioc = defanged_ioc.replace('.', '[.]')
         defanged_ioc = defanged_ioc.replace('http', 'hxxp')
     return defanged_ioc
