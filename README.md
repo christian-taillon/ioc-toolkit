@@ -15,7 +15,7 @@ Before running the script, ensure you have Python installed on your system. Pyth
 Clone this repository to your local machine using:
 
 ```bash
-git clone [URL to the repository]
+git clone git@github.com:christian-taillon/ioc-parse.git
 ```
 
 ### Step 2: Install Required Packages
@@ -24,12 +24,6 @@ Navigate to the cloned directory and install the required Python packages using:
 
 ```bash
 pip install -r requirements.txt
-```
-
-### `requirements.txt` Content
-
-```
-requests==2.25.1
 ```
 
 ## Setup
