@@ -1,1 +1,6 @@
-requests==2.25.1
+requests
+pyyaml
+csv
+json
+termcolor
+prompt_toolkit

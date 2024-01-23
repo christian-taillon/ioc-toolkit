@@ -1,82 +1,46 @@
-Python Script for Repository Scanning
+# IoC Parser
 
-## Description
+IoCParserPro is a Python script designed to extract Indicators of Compromise (IoCs) from text input. It interacts with the api.iocparser.com to parse various types of IoCs and includes additional functionality for guessing IPs and defanging IoCs.
 
-This Python script authenticates to obtain a JWT token and uses it to create scans for repositories listed in a CSV file. It's designed to work with the Privya API.
+### Installation
 
-## Prerequisites
-
-Before running the script, ensure you have Python installed on your system. Python 3.6 or later is recommended. You can download Python from [python.org](https://www.python.org/downloads/).
-
-## Installation
-
-### Step 1: Clone the Repository
-
-Clone this repository to your local machine using:
+First, clone the repository or download the script to your local machine.
 
 ```bash
-git clone git@github.com:christian-taillon/ioc-parse.git
+git clone https://your-repository-url.git
+cd ioc-parser-pro
 ```
 
-### Step 2: Install Required Packages
-
-Navigate to the cloned directory and install the required Python packages using:
+Install the required Python packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Setup
+### Usage
 
-### Environment Variables
+#### Common Steps for All Operating Systems
 
-Set the following environment variables:
+1. Run the script using Python:
 
-- `privya_client_id`: Your Privya client ID.
-- `privya_client_secret`: Your Privya client secret.
+   ```bash
+   python3 ioc_parser_pro.py
+   ```
 
-#### Linux/macOS
+2. Follow the on-screen prompts to input text directly or use the `--input` flag to specify a file path for text input.
 
-Open your terminal and run:
+3. Optionally, use the `--output` flag to specify a file path for saving the output and `--format` to set the output format (`yaml`, `txt`, `csv`, `json`).
 
-```bash
-export privya_client_id='your_client_id'
-export privya_client_secret='your_client_secret'
-```
+4. To opt out of defanging IoCs, use the `--nodefang` flag.
 
-#### Windows
+#### Linux & macOS
 
-Open Command Prompt and run:
-
-```cmd
-set privya_client_id=your_client_id
-set privya_client_secret=your_client_secret
-```
-
-### CSV File
-
-Ensure you have a CSV file named `repos.csv` in the same directory as the script. The CSV file should have a column named `repo` containing the repository clone paths.
-
-## Usage
-
-Run the script using the following command:
-
-```bash
-python3 script_name.py
-```
-
-Replace `script_name.py` with the actual name of the Python script.
-
-### Operating System Specific Instructions
-
-#### Linux/macOS
-
-1. Open your terminal.
-2. Navigate to the script's directory.
-3. Run the script using the command above.
+- Open your terminal.
+- Navigate to the directory where the script is located.
+- Follow the common steps outlined above.
 
 #### Windows
 
-1. Open Command Prompt or PowerShell.
-2. Navigate to the script's directory.
-3. Run the script using the command above.
+- Open Command Prompt or PowerShell.
+- Navigate to the directory where the script is located.
+- Follow the common steps outlined above.
