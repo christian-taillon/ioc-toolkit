@@ -112,7 +112,7 @@ def format_output(data, output_format):
                 writer.writerow([ioc_type, ioc])
         return output.getvalue()
 
-    elif output_format in ['yaml', 'txt']:
+    elif output_format == 'yaml':
         # Custom colored output for YAML and TXT formats
         colored_output = ""
         for ioc_type, iocs in data.items():
@@ -120,6 +120,16 @@ def format_output(data, output_format):
             for ioc in iocs:
                 colored_output += "  - " + ioc + "\n"
         return colored_output
+
+    elif output_format == 'txt':
+        # Text formatt
+        output = ""
+        for ioc_type, iocs in data.items():
+           output += (ioc_type + "\n")
+           for ioc in iocs:
+               output += (ioc + "\n")
+        return output
+
 
     elif output_format == 'json':
         # JSON formatting
